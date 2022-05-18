@@ -1,32 +1,45 @@
-nav {
-    padding: 0 50px;
-    text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-ul{
-    list-style: none;
-    padding: 0;
+body {
     margin: 0;
-    display: inline-block;
-    background: #ddd;
-    border-radius: 5px;
+    padding: 0;
 }
 
-nav > ul > li {
-    float: left;
-    width: 150px;
-    height: 65px;
-    line-height: 65px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
     position: relative;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
 }
 
-nav > ul > li:hover {
-    background: #d5d5d5;
-    border-radius: 5px;
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
 }
 
 ul.drop-menu {
@@ -35,25 +48,77 @@ ul.drop-menu {
     left: 0%;
     width: 100%;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 ul.drop-menu li {
-    background: #666;
-    color: rgba(255, 255, 255, 0.7);
+    background-color: #666;
+    color: white;
+
 }
 
 ul.drop-menu li:hover {
-    background: #606060;
-}
-
-ul.drop-menu li:last-child {
-    border-radius: 0px 0px 5px 5px;
+    background-color: #606060;
 }
 
 ul.drop-menu li {
     display: none;
 }
 
-li:hover>ul.drop-menu li {
-    display: block;
+li:hover > ul.drop-menu li {
+    display: block
 }
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+

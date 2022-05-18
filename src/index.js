@@ -1,9 +1,8 @@
 import "./style.css";
 
-function component() {
-  const element = document.createElement("div");
-  element.innerHTML = "";
-  return element;
-}
+const toggleButton = document.getElementsByClassName("toggle-button")[0];
+const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 
-document.body.appendChild(component());
+toggleButton.addEventListener("click", () => {
+  navbarLinks.classList.toggle("active");
+});

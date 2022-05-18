@@ -5,25 +5,41 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>
-          Style 1
-          <ul class="drop-menu">
-            <li>adsfjkla</li>
-            <li>adsfjkla</li>
-            <li>adsfjkla</li>
-          </ul>
-        </li>
-        <li>
-          Style 2
-          <ul class="drop-menu">
-            <li>adsfjkla</li>
-            <li>adsfjkla</li>
-            <li>adsfjkla</li>
-          </ul>
-        </li>
-      </ul>
+    <nav class="navbar">
+      <div class="brand-title">Brand Name</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+            <ul class="drop-menu">
+              <li>uno</li>
+              <li>dos</li>
+              <li>tres</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">About</a>
+            <ul class="drop-menu">
+              <li>uno</li>
+              <li>dos</li>
+              <li>tres</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+            <ul class="drop-menu">
+              <li>uno</li>
+              <li>dos</li>
+              <li>tres</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </nav>
   </body>
 </html>
